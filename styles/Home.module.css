@@ -1,0 +1,171 @@
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a2e;
+  color: #e0e0e0;
+}
+
+.main {
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+  text-align: center;
+  color: #4db5ff;
+  text-shadow: 0 0 10px rgba(77, 181, 255, 0.5);
+}
+
+.section {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.emotionMeter {
+  width: 100%;
+  height: 30px;
+  -webkit-appearance: none;
+  background: linear-gradient(to right, #ff4d4d, #ffa64d, #ffff4d, #4dff4d, #4dffff);
+  outline: none;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.emotionMeter::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.emotionValue {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 10px;
+  color: #4db5ff;
+}
+
+.keywordSelection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.keyword {
+  padding: 10px 20px;
+  background-color: #16213e;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 0 5px rgba(77, 181, 255, 0.3);
+}
+
+.keyword.selected {
+  background-color: #4db5ff;
+  color: #1a1a2e;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(77, 181, 255, 0.7);
+}
+
+.textarea, .input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #4db5ff;
+  border-radius: 10px;
+  resize: vertical;
+  background-color: #16213e;
+  color: #e0e0e0;
+}
+
+.textarea {
+  height: 100px;
+}
+
+.optimizationResult {
+  background-color: #16213e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(77, 181, 255, 0.2);
+}
+
+.submitButton {
+  background-color: #4db5ff;
+  color: #1a1a2e;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.submitButton:hover {
+  background-color: #3a8ac5;
+  transform: scale(1.05);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+.questBox {
+  background-color: #243b55;
+  border: 2px solid #4db5ff;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(77, 181, 255, 0.3);
+}
+
+.questTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4db5ff;
+  margin-bottom: 10px;
+}
+
+.questDescription {
+  margin-bottom: 10px;
+}
+
+.questSteps {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.questSteps li {
+  margin-bottom: 5px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.questSteps li:before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: #4db5ff;
+}
